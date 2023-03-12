@@ -31,11 +31,7 @@ steps:
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-
-variables:
-  buildConfiguration: 'Release'
+    configuration: '$(buildConfiguration)
 
 steps:
   - script: dotnet build ".\src\MyProject.sln" --configuration $(buildConfiguration)
